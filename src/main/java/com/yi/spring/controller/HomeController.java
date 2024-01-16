@@ -20,23 +20,23 @@ public class HomeController {
         InternalResourceViewResolver irvr = new InternalResourceViewResolver( "/WEB-INF/views", ".jsp" );
 
         ApplicationContext context = new ClassPathXmlApplicationContext( "person.xml" );
-        ApplicationContext contextM = new ClassPathXmlApplicationContext( "member.xml" );
-        PersonService personService = context.getBean( "personService", PersonService.class );
-        personService.sayHello();
-
-
-        PersonService personService2 = (PersonService)context.getBean( "proxyCal" );
-        personService2.sayHello();
-
-        PersonService personService_ = new PersonServiceImpl( "야야호", 41 );
-        personService_.sayHello();
-
-        MemberService memberService = contextM.getBean( "memberService", MemberService.class );
-
-//        MemberDAO mdao = new MemberDAOImpl();
-//        ((MemberServiceImpl)memberService).setMemberDAO( mdao );
-        memberService.listMembers();
-
+//        ApplicationContext contextM = new ClassPathXmlApplicationContext( "member.xml" );
+//        PersonService personService = context.getBean( "personService", PersonService.class );
+//        personService.sayHello();
+//
+//
+//        PersonService personService2 = (PersonService)context.getBean( "proxyCal" );
+//        personService2.sayHello();
+//
+//        PersonService personService_ = new PersonServiceImpl( "야야호", 41 );
+//        personService_.sayHello();
+//
+//        MemberService memberService = contextM.getBean( "memberService", MemberService.class );
+//
+////        MemberDAO mdao = new MemberDAOImpl();
+////        ((MemberServiceImpl)memberService).setMemberDAO( mdao );
+//        memberService.listMembers();
+//
 
         ((ClassPathXmlApplicationContext)context).close();
         return "index";

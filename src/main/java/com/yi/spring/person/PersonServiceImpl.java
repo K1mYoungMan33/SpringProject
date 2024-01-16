@@ -1,5 +1,7 @@
 package com.yi.spring.person;
 
+import org.aspectj.lang.JoinPoint;
+
 public class PersonServiceImpl implements PersonService{
     private String name;
     private int age;
@@ -37,5 +39,12 @@ public class PersonServiceImpl implements PersonService{
     public void sayHello() {
         System.out.println( "이름: " + name );
         System.out.println( "나이: " + age + "살" );
+    }
+
+    public void beforemethod(JoinPoint joinPoint) throws Throwable {
+        System.out.println( joinPoint );
+    }
+
+    public void beforeController(JoinPoint joinPoint) throws Throwable {
     }
 }
