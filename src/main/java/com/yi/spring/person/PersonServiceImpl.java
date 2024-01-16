@@ -4,6 +4,19 @@ public class PersonServiceImpl implements PersonService{
     private String name;
     private int age;
 
+    public PersonServiceImpl(String name) {
+        this.name = name;
+    }
+
+    public PersonServiceImpl(String name, int age) {
+        this.name = name;
+        this.age = age;
+    }
+
+    public PersonServiceImpl() {
+
+    }
+
     public String getName() {
         return name;
     }
