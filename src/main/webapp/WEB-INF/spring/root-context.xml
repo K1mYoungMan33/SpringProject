@@ -6,5 +6,5 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context https://www.springframework.org/schema/context/spring-context.xsd http://www.springframework.org/schema/aop https://www.springframework.org/schema/aop/spring-aop.xsd">
 
     <aop:aspectj-autoproxy/>
-    <bean id="applicationAspect" class="com.yi.spring.ApplicationAspect"/>
+<!--    <bean id="applicationAspect" class="com.yi.spring.ApplicationAspect"/>-->
 </beans>

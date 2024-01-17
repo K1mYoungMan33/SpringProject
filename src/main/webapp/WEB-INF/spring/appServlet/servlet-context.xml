@@ -21,6 +21,7 @@
     <context:component-scan base-package="com.yi.spring.controller" />
 
 
+    <beans:import resource="classpath:aop-config.xml"/>
 
 </beans:beans>
 

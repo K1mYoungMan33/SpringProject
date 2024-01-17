@@ -1,35 +1,54 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <beans xmlns="http://www.springframework.org/schema/beans"
-       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aop="http://www.springframework.org/schema/aop"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:beans="http://www.springframework.org/schema/beans"
        xsi:schemaLocation="http://www.springframework.org/schema/beans
-                           http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/aop https://www.springframework.org/schema/aop/spring-aop.xsd">
+                           http://www.springframework.org/schema/beans/spring-beans.xsd
+                           http://www.springframework.org/schema/aop
+                           https://www.springframework.org/schema/aop/spring-aop.xsd
+                           http://www.springframework.org/schema/context
+                           https://www.springframework.org/schema/context/spring-context.xsd">
 
-    <bean id="personService" class="com.yi.spring.person.PersonServiceImpl">
-        <property name="name" value="홍길동"/>
-        <property name="age" value="123"/>
-    </bean>
-    <bean id="personService2" class="com.yi.spring.person.PersonServiceImpl">
-        <constructor-arg value="손흥민" />
-        <constructor-arg value="23" />
-    </bean>
+<!--    <bean id="personService" class="com.yi.spring.person.PersonServiceImpl">-->
+<!--        <property name="name" value="홍길동"/>-->
+<!--        <property name="age" value="123"/>-->
+<!--    </bean>-->
+<!--    <bean id="personService2" class="com.yi.spring.person.PersonServiceImpl">-->
+<!--        <constructor-arg value="손흥민" />-->
+<!--        <constructor-arg value="23" />-->
+<!--    </bean>-->
 
-    <bean id="logAdvice" class="com.yi.spring.calc.LoggingAdvice" />
-    <bean id="proxyCal" class="org.springframework.aop.framework.ProxyFactoryBean">
-        <property name="target" ref="personService" />
-        <property name="interceptorNames">
-            <list>
-                <value>logAdvice</value>
-            </list>
-        </property>
-    </bean>
-    
-    <aop:config>
-        <aop:pointcut id="p1" expression="execution(public * com..*.*(..))"/>
-        <aop:aspect id="adv" ref="personService">
-            <aop:before pointcut-ref="p1" method="beforemethod"/>
-        </aop:aspect>
-        
-    </aop:config>
+<!--    <bean id="logAdvice" class="com.yi.spring.calc.LoggingAdvice" />-->
+<!--    <bean id="proxyCal" class="org.springframework.aop.framework.ProxyFactoryBean">-->
+<!--        <property name="target" ref="personService" />-->
+<!--        <property name="interceptorNames">-->
+<!--            <list>-->
+<!--                <value>logAdvice</value>-->
+<!--            </list>-->
+<!--        </property>-->
+<!--    </bean>-->
+<!--    -->
+<!--    <aop:config>-->
+<!--        <aop:pointcut id="p1" expression="execution(public * com..*.*(..))"/>-->
+<!--        <aop:aspect id="adv" ref="personService">-->
+<!--            <aop:before pointcut-ref="p1" method="beforemethod"/>-->
+<!--        </aop:aspect>-->
+<!--        -->
+<!--    </aop:config>-->
+
+    <context:component-scan base-package="com.yi.spring.*"/>
+    <aop:aspectj-autoproxy/>
+
+<!--    <bean id="log" class="com.yi.spring.LogAdvice"/>-->
+<!--    <aop:config>-->
+<!--        <aop:pointcut id="allPointCut" expression="execution(* com.yi.spring.*.*.*(..)))"/>-->
+<!--        <aop:aspect ref="log">-->
+<!--            <aop:before method="printLog" pointcut-ref="allPointCut"/>-->
+<!--            <aop:after method="printLogging" pointcut-ref="allPointCut"/>-->
+<!--        </aop:aspect>-->
+<!--    </aop:config>-->
 
 </beans>

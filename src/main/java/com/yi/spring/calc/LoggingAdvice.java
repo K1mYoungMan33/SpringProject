@@ -2,6 +2,7 @@ package com.yi.spring.calc;
 
 import org.aopalliance.intercept.MethodInterceptor;
 import org.aopalliance.intercept.MethodInvocation;
+import org.aspectj.lang.JoinPoint;
 
 public class LoggingAdvice implements MethodInterceptor {
     @Override
@@ -15,4 +16,5 @@ public class LoggingAdvice implements MethodInterceptor {
         System.out.println( invocation.getMethod() + "메서드 호출 후" );
         return object;
     }
+
 }
