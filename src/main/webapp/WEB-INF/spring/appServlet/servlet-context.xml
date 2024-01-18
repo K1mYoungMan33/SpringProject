@@ -22,10 +22,11 @@
         <beans:property name="order" value="1"/>
     </beans:bean>
 
-    <context:component-scan base-package="com.yi.spring.controller" />
+    <context:component-scan base-package="com.yi.spring.*" />
+    <context:component-scan base-package="com.yi.spring.p21.*" />
+    <context:component-scan base-package="com.yi.spring.p21.vo" />
+    <context:component-scan base-package="com.yi.spring.p21.service" />
 
-
-    <beans:import resource="classpath:aop-config.xml"/>
 
 </beans:beans>
 
