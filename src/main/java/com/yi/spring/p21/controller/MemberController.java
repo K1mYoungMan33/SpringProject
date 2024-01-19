@@ -64,11 +64,11 @@ public class MemberController {
     public String updateMember(MemberVO vo, Model model) throws Exception {
         System.out.println( vo );
         memberService.updateMember(vo);
-        return "member/list";
+        return "redirect:listMember";
     }
     @GetMapping("deleteMember")
     public String deleteMember(MemberVO vo, Model model) throws Exception {
         memberService.deleteMember(vo);
-        return "member/list";
+        return "redirect:listMember";
     }
 }

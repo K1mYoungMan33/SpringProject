@@ -1,6 +1,8 @@
 <html>
 <body>
 <h2>Hello World!</h2>
-<a href="http://localhost:8062/p21/member/listMember">p21/member/listMember</a>
+<a href="http://localhost:8062/p21/member/listMember">p21/member/listMember</a><br>
+<a href="http://localhost:8062/p21/member/addMember">p21/member/addMember</a><br>
+<a href="http://localhost:8062/p33/emp/emplist">p33/emp/emplist</a><br>
 </body>
 </html>

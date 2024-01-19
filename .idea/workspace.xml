@@ -9,40 +9,29 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="30316b06-48e4-4e2e-8206-1607c9260f84" name="Changes" comment="브랜치">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/yi/spring/controller/MemberController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/yi/spring/controller/SimpleUrlController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/yi/spring/controller/UserController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/yi/spring/controller/UserController_2.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/yi/spring/domain/UserVO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/yi/spring/p21/controller/MemberController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/yi/spring/p21/dao/MemberDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/yi/spring/p21/dao/MemberDAOImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/yi/spring/p21/service/MemberService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/yi/spring/p21/service/MemberServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/yi/spring/p21/vo/MemberVO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/yi/spring/unused/tttt.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/mappers/memberMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/memberMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/mybatis-config.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/deprecated_action-servlet.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/spring/appServlet/servlet-context2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/member/list.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/member/listForm.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/member/login.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/member/loginForm.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/member/memberUpdate.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/test/index.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/test/result.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+    <list default="true" id="30316b06-48e4-4e2e-8206-1607c9260f84" name="Changes" comment="mybatis xml 작성방식 crud 실습">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/yi/spring/p21/service/MemberServiceImpl2.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/yi/spring/p22/mappers/MemberMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/yi/spring/p33/controller/EmpController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/yi/spring/p33/mappers/EmployeeMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/yi/spring/p33/service/EmployeeService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/yi/spring/p33/service/EmployeeServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/yi/spring/p33/vo/Department.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/yi/spring/p33/vo/Employee.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/yi/spring/p33/vo/EmployeeVO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/mappers/member/memberMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/mappers/ynbank/ynbankMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/mybatis-config2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/emp/emp_list.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/yi/spring/LogAdvice.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yi/spring/unused/LogAdvice.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/aop-config.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/aop-config.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/spring/appServlet/servlet-context.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/spring/appServlet/servlet-context.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/yi/spring/p21/controller/MemberController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yi/spring/p21/controller/MemberController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/yi/spring/p21/service/MemberServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yi/spring/p21/service/MemberServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mappers/memberMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mappers/member/memberMapper2.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/memberMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/memberMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mybatis-config.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mybatis-config.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/spring/root-context.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/spring/root-context.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/index.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/member/listForm.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/member/listForm.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,10 +43,10 @@
       <list>
         <option value="AnnotationType" />
         <option value="HTTP Public Environment File" />
-        <option value="Interface" />
-        <option value="Class" />
         <option value="spring-beans.schema" />
         <option value="Jsp File" />
+        <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -103,13 +92,19 @@
     "Tomcat Server.list.jsp.executor": "Run",
     "git-widget-placeholder": "spring02",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/lenovo/IdeaProjectsUltimate/spring02/src/main/webapp/WEB-INF/spring/appServlet",
+    "last_opened_file_path": "C:/Users/lenovo/IdeaProjectsUltimate/spring02/src/main/resources/mappers/ynbank",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
     "vue.rearranger.settings.migration": "true"
+  },
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mysql"
+    ]
   }
 }]]></component>
   <component name="RecentsManager">
@@ -117,18 +112,22 @@
       <recent name="com.yi.spring.domain" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\lenovo\IdeaProjectsUltimate\spring02\src\main\resources\mappers\ynbank" />
+      <recent name="C:\Users\lenovo\IdeaProjectsUltimate\spring02\src\main\resources" />
+      <recent name="C:\Users\lenovo\IdeaProjectsUltimate\spring02\src\main\resources\mappers" />
       <recent name="C:\Users\lenovo\IdeaProjectsUltimate\spring02\src\main\webapp\WEB-INF\spring\appServlet" />
       <recent name="C:\Users\lenovo\IdeaProjectsUltimate\spring02\src\main\webapp\WEB-INF\views\member" />
-      <recent name="C:\Users\lenovo\IdeaProjectsUltimate\spring02\src\main\webapp\WEB-INF" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\lenovo\IdeaProjectsUltimate\spring02\src\main\resources\mappers\member" />
       <recent name="C:\Users\lenovo\IdeaProjectsUltimate\spring02\src\main\resources" />
       <recent name="C:\Users\lenovo\IdeaProjectsUltimate\spring02\src\main\webapp\WEB-INF\views\member" />
       <recent name="C:\Users\lenovo\IdeaProjectsUltimate\spring02\src\main\webapp" />
       <recent name="C:\Users\lenovo\IdeaProjectsUltimate\spring02\src\main\webapp\WEB-INF" />
-      <recent name="C:\Users\lenovo\IdeaProjectsUltimate\spring02\src\main\webapp\WEB-INF\spring\test" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.yi.spring.p33.vo" />
+      <recent name="com.yi.spring.p21.service" />
       <recent name="com.yi.spring.controller" />
       <recent name="com.yi.spring" />
     </key>
@@ -229,54 +228,13 @@
         </option>
       </method>
     </configuration>
-    <configuration name="list.jsp" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" temporary="true" APPLICATION_SERVER_NAME="Tomcat 10.1.17" ALTERNATIVE_JRE_ENABLED="false">
-      <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8080/WEB-INF/views/member/list.jsp" />
-      <deployment>
-        <artifact name="spring02:war">
-          <settings>
-            <option name="CONTEXT_PATH" value="/spring02_war" />
-          </settings>
-        </artifact>
-      </deployment>
-      <server-settings>
-        <option name="BASE_DIRECTORY_NAME" value="86a3e9c6-e4e3-4f70-b51e-731e480f7e0d" />
-      </server-settings>
-      <predefined_log_file enabled="true" id="Tomcat" />
-      <predefined_log_file enabled="true" id="Tomcat Catalina" />
-      <predefined_log_file id="Tomcat Manager" />
-      <predefined_log_file id="Tomcat Host Manager" />
-      <predefined_log_file id="Tomcat Localhost Access" />
-      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
-        <option name="USE_ENV_VARIABLES" value="true" />
-        <STARTUP>
-          <option name="USE_DEFAULT" value="true" />
-          <option name="SCRIPT" value="" />
-          <option name="VM_PARAMETERS" value="" />
-          <option name="PROGRAM_PARAMETERS" value="" />
-        </STARTUP>
-        <SHUTDOWN>
-          <option name="USE_DEFAULT" value="true" />
-          <option name="SCRIPT" value="" />
-          <option name="VM_PARAMETERS" value="" />
-          <option name="PROGRAM_PARAMETERS" value="" />
-        </SHUTDOWN>
-      </ConfigurationWrapper>
-      <method v="2">
-        <option name="Make" enabled="true" />
-        <option name="BuildArtifacts" enabled="true">
-          <artifact name="spring02:war" />
-        </option>
-      </method>
-    </configuration>
     <list>
       <item itemvalue="HTTP Request.All in generated-requests" />
       <item itemvalue="HTTP Request.All in http-requests-log" />
       <item itemvalue="Tomcat Server.Tomcat 10.1.17" />
-      <item itemvalue="Tomcat Server.list.jsp" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Tomcat Server.list.jsp" />
         <item itemvalue="HTTP Request.All in http-requests-log" />
         <item itemvalue="HTTP Request.All in generated-requests" />
       </list>
@@ -293,6 +251,8 @@
       <workItem from="1705451599906" duration="16205000" />
       <workItem from="1705474171797" duration="3887000" />
       <workItem from="1705536591552" duration="15104000" />
+      <workItem from="1705564504973" duration="119000" />
+      <workItem from="1705623554773" duration="12420000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <option name="closed" value="true" />
@@ -310,7 +270,15 @@
       <option name="project" value="LOCAL" />
       <updated>1705452404414</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="mybatis xml 작성방식 crud 실습">
+      <option name="closed" value="true" />
+      <created>1705564612030</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1705564612030</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -330,6 +298,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="init" />
     <MESSAGE value="브랜치" />
-    <option name="LAST_COMMIT_MESSAGE" value="브랜치" />
+    <MESSAGE value="mybatis xml 작성방식 crud 실습" />
+    <option name="LAST_COMMIT_MESSAGE" value="mybatis xml 작성방식 crud 실습" />
   </component>
 </project>

@@ -12,7 +12,7 @@
 </head>
 <body>
 <form method="post" action="/p21/member/addMember">
-    <label for="">번호</label>
+    <label for="">번호</label><br>
     <label for="">아이디</label> : <input type="text" name="userId"><br>
     <label for="">이름</label> : <input type="text" name="userName"><br>
     <label for="">비번</label> : <input type="password" name="userPassword"><br>
