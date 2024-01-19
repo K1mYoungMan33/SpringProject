@@ -22,11 +22,35 @@
         <beans:property name="order" value="1"/>
     </beans:bean>
 
-    <context:component-scan base-package="com.yi.spring.*" />
-    <context:component-scan base-package="com.yi.spring.p21.*" />
-    <context:component-scan base-package="com.yi.spring.p21.vo" />
-    <context:component-scan base-package="com.yi.spring.p21.service" />
+    <context:component-scan base-package="com.yi.spring.controller" />
 
+
+    <beans:import resource="classpath:aop-config.xml"/>
+
+    <beans:bean id="dataSource"
+          class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+        <beans:property name="driverClassName" value="com.mysql.cj.jdbc.Driver"></beans:property>
+        <beans:property name="url"
+                  value="jdbc:mysql://localhost:3306/ynbank?useSSL=false&amp;serverTimezone=UTC">
+        </beans:property>
+        <beans:property name="username" value="root"></beans:property>
+        <beans:property name="password" value="1234"></beans:property>
+    </beans:bean>
+    <!-- mybatis와 spring을 연동하기 위해 필요한 객체 -->
+    <beans:bean id="sqlSessionFactory"
+                class="org.mybatis.spring.SqlSessionFactoryBean">
+        <beans:property name="dataSource" ref="dataSource" />
+        <beans:property name="configLocation"
+                        value="classpath:mybatis-config.xml" />
+        <beans:property name="mapperLocations"
+                        value="classpath:/mappers/**/*Mapper.xml"/>
+    </beans:bean>
+    <!-- mybatis의 핵심클래스를 등록(spring jdbc의 JdbcTemplate과 동일한 작업)
+       DB테이블을 CLRUD할 수 있는 기능을 제공 -->
+    <beans:bean id="sqlSession"
+                class="org.mybatis.spring.SqlSessionTemplate">
+        <beans:constructor-arg ref="sqlSessionFactory" />
+    </beans:bean>
 
 </beans:beans>
 

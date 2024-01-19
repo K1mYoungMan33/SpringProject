@@ -9,29 +9,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="30316b06-48e4-4e2e-8206-1607c9260f84" name="Changes" comment="mybatis xml 작성방식 crud 실습">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/yi/spring/p21/service/MemberServiceImpl2.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/yi/spring/p22/mappers/MemberMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/yi/spring/p33/controller/EmpController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/yi/spring/p33/mappers/EmployeeMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/yi/spring/p33/service/EmployeeService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/yi/spring/p33/service/EmployeeServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/yi/spring/p33/vo/Department.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/yi/spring/p33/vo/Employee.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/yi/spring/p33/vo/EmployeeVO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/mappers/member/memberMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/mappers/ynbank/ynbankMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/mybatis-config2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/emp/emp_list.jsp" afterDir="false" />
+    <list default="true" id="30316b06-48e4-4e2e-8206-1607c9260f84" name="Changes" comment="살려줘">
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/spring/appServlet/servlet-context3.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/yi/spring/p21/controller/MemberController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yi/spring/p21/controller/MemberController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/yi/spring/p21/service/MemberServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yi/spring/p21/service/MemberServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mappers/memberMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mappers/member/memberMapper2.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/memberMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/memberMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mybatis-config.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mybatis-config.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/spring/appServlet/servlet-context.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/spring/appServlet/servlet-context.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/spring/appServlet/servlet-context2.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/spring/root-context.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/spring/root-context.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/index.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/member/listForm.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/member/listForm.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -98,6 +81,9 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.23601973",
     "settings.editor.selected.configurable": "preferences.pluginManager",
     "vue.rearranger.settings.migration": "true"
   },
@@ -252,7 +238,7 @@
       <workItem from="1705474171797" duration="3887000" />
       <workItem from="1705536591552" duration="15104000" />
       <workItem from="1705564504973" duration="119000" />
-      <workItem from="1705623554773" duration="12420000" />
+      <workItem from="1705623554773" duration="16323000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <option name="closed" value="true" />
@@ -278,7 +264,15 @@
       <option name="project" value="LOCAL" />
       <updated>1705564612030</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="살려줘">
+      <option name="closed" value="true" />
+      <created>1705640441044</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1705640441044</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -299,6 +293,7 @@
     <MESSAGE value="init" />
     <MESSAGE value="브랜치" />
     <MESSAGE value="mybatis xml 작성방식 crud 실습" />
-    <option name="LAST_COMMIT_MESSAGE" value="mybatis xml 작성방식 crud 실습" />
+    <MESSAGE value="살려줘" />
+    <option name="LAST_COMMIT_MESSAGE" value="살려줘" />
   </component>
 </project>
