@@ -12,11 +12,11 @@
 </head>
 <body>
 <form method="post" action="/p21/member/updateMember">
-    <label for="">번호${member.userNo}</label><br>
+    <label >번호${member.userNo}</label><br>
     <input type="hidden" name="userNo" value="${member.userNo}">
-    <label for="">아이디</label> : <input type="text" name="userId" value="${member.userId}"><br>
-    <label for="">이름</label> : <input type="text" name="userName" value="${member.userName}"><br>
-    <label for="">비번</label> : <input type="password" name="userPassword" value="${member.userPassword}"><br>
+    <label >아이디</label> : <input type="text" name="userId" value="${member.userId}"><br>
+    <label >이름</label> : <input type="text" name="userName" value="${member.userName}"><br>
+    <label >비번</label> : <input type="password" name="userPassword" value="${member.userPassword}"><br>
     <input type="submit" value="수정">
 </form>
 </body>

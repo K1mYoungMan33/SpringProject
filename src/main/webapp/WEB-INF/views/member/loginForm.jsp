@@ -12,10 +12,10 @@
 </head>
 <body>
 <form method="post" action="/user/login">
-    <label for="">번호</label> : <input type="text" name="userNo"><br>
-    <label for="">아이디</label> : <input type="text" name="userId"><br>
-    <label for="">이름</label> : <input type="text" name="userName"><br>
-    <label for="">비번</label> : <input type="password" name="password"><br>
+    <label >번호</label> : <input type="text" name="userNo"><br>
+    <label >아이디</label> : <input type="text" name="userId"><br>
+    <label >이름</label> : <input type="text" name="userName"><br>
+    <label >비번</label> : <input type="password" name="password"><br>
     <input type="submit" value="등록">
 </form>
 

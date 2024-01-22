@@ -14,9 +14,9 @@
 결과 ${userNo} :
 
 <form method="post" action="#">
-    <label for="">이름</label> : <input type="text" name="name" value="${userName}"><br>
-    <label for="">아이디</label> : <input type="text" name="id" value="${userId}"><br>
-    <label for="">비번</label> : <input type="password" name="password" value="${password}"><br>
+    <label >이름</label> : <input type="text" name="name" value="${userName}"><br>
+    <label >아이디</label> : <input type="text" name="id" value="${userId}"><br>
+    <label >비번</label> : <input type="password" name="password" value="${password}"><br>
     <input type="submit" value="등록">
 </form>
 

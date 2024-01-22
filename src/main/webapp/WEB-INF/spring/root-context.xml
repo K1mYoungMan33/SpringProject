@@ -36,9 +36,9 @@
         <property name="basePackage" value="com.yi.spring.mappers"/>
     </bean>
 
-    <bean id="memberMapper" class="com.yi.spring.mappers.MemberMapper" abstract="true">
-    </bean>
-    <bean id="employeeMapper" class="com.yi.spring.mappers.EmployeeMapper" abstract="true">
-    </bean>
+<!--    <bean id="memberMapper" class="com.yi.spring.mappers.MemberMapper" abstract="true">-->
+<!--    </bean>-->
+<!--    <bean id="employeeMapper" class="com.yi.spring.mappers.EmployeeMapper" abstract="true">-->
+<!--    </bean>-->
 
 </beans>
