@@ -1,0 +1,49 @@
+# 데이터베이스 연결 정보
+$server = "your_server"
+$database = "your_database"
+$user = "your_user"
+$password = "your_password"
+
+# 각 폴더에 대한 파일별 커밋 횟수 조회 및 삽입 쿼리 생성
+Get-ChildItem -Recurse -Directory | ForEach-Object {
+    $folderPath = $_.FullName
+    Get-ChildItem -Recurse -File $_.FullName | ForEach-Object {
+        $filePath = $_.FullName
+        $commitCount = git log --oneline -- $filePath | Measure-Object | Select-Object -ExpandProperty Count
+        $author = git log -1 --format='%an' -- $filePath
+
+        # 쿼리 생성
+        $query = @"
+INSERT INTO loganal (FolderPath, FileName, CommitCount, Author)
+VALUES ('$folderPath', '$filePath', $commitCount, '$author');
+"@
+
+        # 쿼리를 데이터베이스에 전송 (아래의 ADO.NET 코드로 실제 전송 필요)
+        Write-Output $query
+    }
+}
+
+
+# 중간 파일 경로
+$outputFilePath = "iiiInsertFile.sql"
+
+# 각 폴더에 대한 파일별 커밋 횟수 조회 및 중간 파일에 삽입 쿼리 작성
+Get-ChildItem -Recurse -Directory | ForEach-Object {
+    $folderPath = $_.FullName
+    Get-ChildItem -Recurse -File $_.FullName | ForEach-Object {
+        $filePath = $_.FullName
+        $commitCount = git log --oneline -- $filePath | Measure-Object | Select-Object -ExpandProperty Count
+        $author = git log -1 --format='%an' -- $filePath
+
+        # 쿼리 작성
+        $query = @"
+INSERT INTO loganal (FolderPath, FileName, CommitCount, Author)
+VALUES ('$folderPath', '$filePath', $commitCount, '$author');
+"@
+
+        # 쿼리를 중간 파일에 추가
+        $query | Out-File -Append -Encoding utf8 -FilePath $outputFilePath
+    }
+}
+
+Write-Host "쿼리가 중간 파일에 저장되었습니다. 파일 경로: $outputFilePath"
