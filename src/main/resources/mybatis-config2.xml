@@ -9,7 +9,7 @@
         <setting name="mapUnderscoreToCamelCase" value="true"/>
     </settings>
     <typeAliases>
-        <package name="com.yi.spring.p21.vo"/>
+        <package name="com.yi.spring.vo"/>
     </typeAliases>
     <mappers>
 <!--        <mapper resource="com.yi.spring.mappers" />-->

@@ -7,8 +7,8 @@
         <setting name="mapUnderscoreToCamelCase" value="true"/>
     </settings>
     <typeAliases>
-        <typeAlias type="com.yi.spring.p22.mappers.MemberMapper" alias="Mappers"/>
-        <package name="com.yi.spring.p21.vo"/>
+        <typeAlias type="com.yi.spring.mappers.MemberMapper" alias="Mappers"/>
+        <package name="com.yi.spring.vo"/>
     </typeAliases>
     <!-- 개발 환경 -->
     <environments default="development">
@@ -31,7 +31,7 @@
         <!--        &lt;!&ndash; 매퍼 인터페이스를 사용 &ndash;&gt;-->
         <!--        <mapper class="com.yi.spring.mappers"/>-->
         <!--        &lt;!&ndash; 매퍼로 패키지내 모든 인터페이스를 등록 &ndash;&gt;-->
-        <package name="com.yi.spring.p33.mappers"/>
+        <package name="com.yi.spring.mappers"/>
     </mappers>
 
 </configuration>

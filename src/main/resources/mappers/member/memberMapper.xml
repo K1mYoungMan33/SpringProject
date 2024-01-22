@@ -2,7 +2,7 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
-<mapper namespace="com.yi.spring.p22.mappers.MemberMapper">
+<mapper namespace="com.yi.spring.mappers.MemberMapper">
 
 
     <select id="listMembers" resultMap="memberResult">
@@ -13,25 +13,25 @@
         select * from member where userNo=#{vo.userNo}
     </select>
 
-    <resultMap type="com.yi.spring.p21.vo.MemberVO" id="memberResult">
+    <resultMap type="com.yi.spring.vo.MemberVO" id="memberResult">
         <id property="userNo" column="userNo"/>
         <result property="userId" column="userId"/>
         <result property="userName" column="userName"/>
         <result property="userPassword" column="userPassword"/>
     </resultMap>
 
-    <insert id="addMember" parameterType="com.yi.spring.p21.vo.MemberVO">
+    <insert id="addMember" parameterType="com.yi.spring.vo.MemberVO">
         insert into member(userid, userName, userPassword)
         values (#{vo.userId}, #{vo.userName}, #{vo.userPassword})
     </insert>
 
-    <update id="updateMember" parameterType="com.yi.spring.p21.vo.MemberVO">
+    <update id="updateMember" parameterType="com.yi.spring.vo.MemberVO">
         update member
             SET userId=#{vo.userId} , userName=#{vo.userName} , userPassword=#{vo.userPassword}
         where userNo=#{vo.userNo}
     </update>
 
-    <delete id="deleteMember" parameterType="com.yi.spring.p21.vo.MemberVO">
+    <delete id="deleteMember" parameterType="com.yi.spring.vo.MemberVO">
         delete from member
         where userNo=#{vo.userNo}
     </delete>

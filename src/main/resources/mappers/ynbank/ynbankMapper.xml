@@ -2,7 +2,7 @@
         <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
                 "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
-<mapper namespace="com.yi.spring.p33.mappers.EmployeeMapper">
+<mapper namespace="com.yi.spring.mappers.EmployeeMapper">
 
 
 <select id="listEmployees" resultMap="employeeResult">
@@ -11,7 +11,7 @@
     order by empCode
 </select>
 
-<resultMap id="employeeResult" type="com.yi.spring.p33.vo.Employee">
+<resultMap id="employeeResult" type="com.yi.spring.vo.Employee">
 <id property="empCode" column="empCode"/>
 <result property="empName" column="empName"/>
 <result property="empTitle" column="empTitle"/>
@@ -24,7 +24,7 @@
     <result property="empRetire" column="empRetire"/>
 <!--<result property="dept.deptName" column="deptName"/>-->
 <!--<result property="dept.deptNo" column="deptNo"/>-->
-    <association property="dept" javaType="com.yi.spring.p33.vo.Department">
+    <association property="dept" javaType="com.yi.spring.vo.Department">
         <id property="deptNo" column="deptNo"/>
         <result property="deptName" column="deptName"/>
     </association>
