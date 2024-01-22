@@ -59,6 +59,7 @@
     <context:component-scan base-package="com.yi.spring.service" />
     <context:component-scan base-package="com.yi.spring.mappers" />
     <context:component-scan base-package="com.yi.spring.controller" />
+    <context:component-scan base-package="com.yi.spring.configure" />
 
 </beans:beans>
 

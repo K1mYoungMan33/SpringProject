@@ -1,5 +1,6 @@
 package com.yi.spring.service;
 
+import com.yi.spring.exception.InsufficientBalanceException;
 import com.yi.spring.mappers.AccountMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -12,12 +13,12 @@ public class AccountServiceImpl implements AccountService{
     @Autowired
     private AccountMapper accountMapper;
 
-    @Transactional(rollbackFor = Exception.class)
+    @Transactional(rollbackFor = InsufficientBalanceException.class)
     @Override
-    public void sendMoney() throws Exception {
+    public void sendMoney() throws InsufficientBalanceException {
         accountMapper.updateBalance1();
         if ( getBalance( "70-490-911" ) < 0 ) {
-            throw new Exception( "잔액이 부족합니다." );
+            throw new InsufficientBalanceException( "잔액이 부족합니다." );
         }
 
         accountMapper.updateBalance2();

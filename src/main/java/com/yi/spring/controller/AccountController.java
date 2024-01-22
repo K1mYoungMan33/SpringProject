@@ -1,8 +1,14 @@
 package com.yi.spring.controller;
 
+import com.yi.spring.exception.ErrorResponse;
+import com.yi.spring.exception.InsufficientBalanceException;
 import com.yi.spring.service.AccountService;
 import lombok.Setter;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.HttpStatusCode;
+import org.springframework.http.ProblemDetail;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.ui.Model;
@@ -23,10 +29,34 @@ public class AccountController {
 //    @RequestMapping(value ="/accountt/balance", method= RequestMethod.GET)
     @GetMapping("/accountt/balance")
     @Transactional
-    public String sendMoney(Model model) throws Exception{
-        accountService.sendMoney();
+    public String sendMoney(Model model){
+
+        try {
+            accountService.sendMoney();
+        } catch (InsufficientBalanceException e) {
+            model.addAttribute( "msg", e.getInsufficientBalanceMsg() );
+            e.printStackTrace();
+        }
         model.addAttribute( "aaa", 1000 );
 
         return "/account/list";
+    }
+
+    public ResponseEntity<ErrorResponse> handleInsufficientBalanceException(InsufficientBalanceException e ) {
+        ErrorResponse errorResponse = new ErrorResponse();
+//            @Override
+//            public HttpStatusCode getStatusCode() {
+//                return null;
+//            }
+//
+//            @Override
+//            public ProblemDetail getBody() {
+//                return null;
+//            }
+//        };
+        errorResponse.setCode( "001" );
+        errorResponse.setMessage( "잔액이 부족합니다.");
+//        return new ResponseEntity<>(errorResponse, HttpStatus.BAD_REQUEST);
+        return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(errorResponse);
     }
 }
