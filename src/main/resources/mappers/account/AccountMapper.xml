@@ -16,4 +16,9 @@
         ]]>
     </update>
 
+    <select id="getBalance" resultType="int">
+        SELECT balance
+        FROM cust_account
+        WHERE accountNo = #{accountNumber}
+    </select>
 </mapper>

@@ -12,12 +12,19 @@ public class AccountServiceImpl implements AccountService{
     @Autowired
     private AccountMapper accountMapper;
 
+    @Transactional(rollbackFor = Exception.class)
     @Override
     public void sendMoney() throws Exception {
         accountMapper.updateBalance1();
-        if ( true )
-            throw new Exception();
-        accountMapper.updateBalance2();
+        if ( getBalance( "70-490-911" ) < 0 ) {
+            throw new Exception( "잔액이 부족합니다." );
+        }
 
+        accountMapper.updateBalance2();
+    }
+
+    @Override
+    public int getBalance( String accountNumber ) {
+        return accountMapper.getBalance( accountNumber );
     }
 }

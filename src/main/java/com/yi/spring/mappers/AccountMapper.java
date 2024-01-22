@@ -11,4 +11,6 @@ public interface AccountMapper {
     @Transactional(propagation = Propagation.REQUIRED, rollbackFor = Exception.class)
 
     void updateBalance2();
+
+    int getBalance(String accountNumber);
 }
