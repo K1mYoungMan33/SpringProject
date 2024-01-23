@@ -1,5 +1,6 @@
 package com.yi.spring.controller;
 
+import com.yi.spring.exception.ErrorCode;
 import com.yi.spring.exception.ErrorResponse;
 import com.yi.spring.exception.InsufficientBalanceException;
 import com.yi.spring.service.AccountService;
@@ -12,6 +13,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -42,8 +44,10 @@ public class AccountController {
         return "/account/list";
     }
 
+    @ExceptionHandler(value= InsufficientBalanceException.class)
     public ResponseEntity<ErrorResponse> handleInsufficientBalanceException(InsufficientBalanceException e ) {
-        ErrorResponse errorResponse = new ErrorResponse();
+        String str = ( "잔액이 부족합니다.");
+        ErrorResponse errorResponse = ErrorResponse.of(ErrorCode.NOT_VALID_ERROR, str );
 //            @Override
 //            public HttpStatusCode getStatusCode() {
 //                return null;
@@ -54,8 +58,7 @@ public class AccountController {
 //                return null;
 //            }
 //        };
-        errorResponse.setCode( "001" );
-        errorResponse.setMessage( "잔액이 부족합니다.");
+//        errorResponse.setCode( "001" );
 //        return new ResponseEntity<>(errorResponse, HttpStatus.BAD_REQUEST);
         return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(errorResponse);
     }
